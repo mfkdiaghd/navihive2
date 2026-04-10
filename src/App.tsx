@@ -94,7 +94,7 @@ const DEFAULT_CONFIGS = {
   'site.customCss': '',
   'site.backgroundImage': '', // 背景图片URL
   'site.backgroundOpacity': '0.15', // 背景蒙版透明度
-  'site.iconApi': 'https://www.faviconextractor.com/favicon/{domain}?larger=true', // 默认使用的API接口，带上 ?larger=true 参数可以获取最大尺寸的图标
+  'site.iconApi': 'https://icons.guolaimoni.com/?url={domain}', // 默认使用的API接口，带上 ?larger=true 参数可以获取最大尺寸的图标
   'site.searchBoxEnabled': 'true', // 是否启用搜索框
   'site.searchBoxGuestEnabled': 'true', // 访客是否可以使用搜索框
 };
@@ -1426,7 +1426,7 @@ function App() {
                             if (domain) {
                               const actualIconApi =
                                 configs['site.iconApi'] ||
-                                'https://www.faviconextractor.com/favicon/{domain}?larger=true';
+                                'https://icons.guolaimoni.com/?url={domain}';
                               const iconUrl = actualIconApi.replace('{domain}', domain);
                               setNewSite({
                                 ...newSite,
