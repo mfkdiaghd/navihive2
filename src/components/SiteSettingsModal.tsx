@@ -48,7 +48,7 @@ export default function SiteSettingsModal({
   onDelete,
   onClose,
   groups = [],
-  iconApi = 'https://www.faviconextractor.com/favicon/{domain}?larger=true',
+  iconApi = 'https://icons.guolaimoni.com/?url={domain}',
 }: SiteSettingsModalProps) {
   const theme = useTheme();
 
@@ -286,7 +286,7 @@ export default function SiteSettingsModal({
                             if (domain) {
                               const actualIconApi =
                                 iconApi ||
-                                'https://www.faviconextractor.com/favicon/{domain}?larger=true';
+                                'https://icons.guolaimoni.com/?url={domain}';
                               const iconUrl = actualIconApi.replace('{domain}', domain);
                               setFormData((prev) => ({
                                 ...prev,
